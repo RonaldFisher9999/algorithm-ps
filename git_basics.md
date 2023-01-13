@@ -1,7 +1,8 @@
+## 1. git 시작하기
+
 - git 저장소 생성
   - `git init`
   - 숨김 파일 .git 에 버전 정보 저장됨
-
 
 - 사용자 등록 (최초 커밋 전 필요)
   - `git config --global user.name <name>`
@@ -44,6 +45,10 @@
   - 현 저장소의 변경사항 모두 출력
   - q로 종료
   - `git log --oneline` : 주요 내용만 출력
+
+</br>
+
+## 2. github 연동
 
 - 깃허브 연동
   - `git remote add origin <깃허브 저장소 주소>`
@@ -92,9 +97,22 @@
   - git status로 확인
   - [gitignore.io](gitignore.io) 에서 운영체제, 언어 등에 맞춘 .ignore 파일 생성 가능
 
-- 서로 다른 로컬 git에서 github로 푸쉬했을 때
+</br>
+
+## 3. 서로 다른 로컬 git에서 github로 푸쉬했을 때
+
+- 별 문제 없는 경우 (conflict 없음)
   - 나중의 push에 문제 생김
   - 나중에 push한 로컬에서 pull하면 merge 하겠냐는 vim 창 나옴
   - :wq로 종료하면 자연스럽게 merge
   - `git log --oneline --graph`로 commit이 어떻게 갈라졌는지 확인
   - 이후 다시 pull, 다른 로컬에서 push 하면 동기화 완료
+
+- 같은 파일을 다른 로컬에서 수정한 경우 (conflict)
+  - 나중 push에 문제 생김
+  - pull 하면 결과 메세지에 'Auto-merging'이라고 뜸
+  - git status 찍어보면 현 브랜치가 master|MERGING
+  - conflict 발생한 파일 `code .`으로 vs code에서 확인
+  - 수정 내역 비교하고 반영할 것 선택 -> 저장
+  - add -> commit -> push
+  - 다른 로컬에서 pull로 받아와서 동기화

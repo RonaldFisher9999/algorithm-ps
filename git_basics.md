@@ -91,3 +91,10 @@
   - git으로 관리하지 않을 파일명 입력하고 저장 (폴더도 가능)
   - git status로 확인
   - [gitignore.io](gitignore.io) 에서 운영체제, 언어 등에 맞춘 .ignore 파일 생성 가능
+
+- 서로 다른 로컬 git에서 github로 푸쉬했을 때
+  - 나중의 push에 문제 생김
+  - 나중에 push한 로컬에서 pull하면 merge 하겠냐는 vim 창 나옴
+  - :wq로 종료하면 자연스럽게 merge
+  - `git log --oneline --graph`로 commit이 어떻게 갈라졌는지 확인
+  - 이후 다시 pull, 다른 로컬에서 push 하면 동기화 완료

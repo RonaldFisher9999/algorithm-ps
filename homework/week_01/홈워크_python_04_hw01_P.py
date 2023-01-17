@@ -1,4 +1,4 @@
-words = ["round" , "dream", "magnet" , "tweet" , "tweet", "trick", "kiwi"]
+words = ["round" , "dream", "magnet" , "tweet", "tweet", "trick", "kiwi"]
 
 n = len(words)
 for i in range(n) :
@@ -12,3 +12,5 @@ for i in range(n) :
         if words[i][0] != words[i - 1][-1] :
             print(f"Player {i + 1} lost")
             break
+else :
+    print("Success")

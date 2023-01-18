@@ -7,6 +7,7 @@
 array = ['eatt','tea','tan','tate','nat','bat']
 
 anagram = [[array[0]]]
+print(anagram)
 n = len(array)
 for i in range(1, n) :
     for group in anagram :

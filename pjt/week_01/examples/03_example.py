@@ -5,4 +5,4 @@ import json
 movie = open('sample.json', encoding='utf-8')
 movie_detail = json.load(movie)
 
-print(movie_detail.keys())
+print(movie_detail)

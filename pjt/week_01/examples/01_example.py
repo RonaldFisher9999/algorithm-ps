@@ -24,8 +24,8 @@ stocks = [
     {'name': '토스'},
 ]
 
-# for stock in stocks:
-#     print(stock.get('price'))
-
 for stock in stocks:
-    print(stock.get('price', '비상장 주식입니다.'))
+    print(stock.get('price'))
+
+# for stock in stocks:
+#     print(stock.get('price', '비상장 주식입니다.'))

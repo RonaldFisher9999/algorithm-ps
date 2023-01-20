@@ -2,8 +2,14 @@ import json
 from pprint import pprint
 
 
-def movie_info(movie):
-    pass 
+def movie_info(movie) :
+    movie_imp_info = {'genre_ids' : movie.get('genre_ids'),
+                'id' : movie.get('id'),
+                'overview' : movie.get('overview'),
+                'poster_path' : movie.get('poster_path'),
+                'title' : movie.get('title'),
+                'vote_average' : movie.get('vote_average')}
+    return movie_imp_info
     # 여기에 코드를 작성합니다.    
 
 

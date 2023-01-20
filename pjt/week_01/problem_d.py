@@ -1,8 +1,19 @@
+# from pprint import pprint
 import json
 
 
-def max_revenue(movies):
-    pass 
+def max_revenue(movies) :
+    max_rev = 0
+    max_rev_title = ""
+    for movie in movies :
+        id = movie.get('id')
+        info = json.load(open(f"data/movies/{id}.json", encoding='utf-8'))
+        rev = info.get("revenue")
+        title = info.get("title")
+        if max_rev < rev :
+            max_rev = rev
+            max_rev_title = title
+    return max_rev_title
     # 여기에 코드를 작성합니다.  
         
         

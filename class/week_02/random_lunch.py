@@ -6,6 +6,7 @@ students = ['고영진','구본웅','김성용','김하늘','김하림',
             '임혜진','정선재','정현아','진익근','최태호',
             '최홍준','하정호','허주혁']
 students_set = set()
+# 조 배정 가능한 전체 학생 목록 불러오기/초기화
 def set_default() :
     global students_set
     try :
@@ -37,6 +38,7 @@ def set_default() :
 
 set_default()
 
+# 조원 수 설정
 number = 0
 while not 2 <= number <= 6:
     try :
@@ -45,6 +47,7 @@ while not 2 <= number <= 6:
         print("정수 입력")
 print("조원 수 :", number)
 
+# 자신 포함 여부 설정
 include = ""
 include = input("자신 포함? (ㅇㅇ : yes, 그외 : no) ")
 person = ""
@@ -54,6 +57,8 @@ if include == "ㅇㅇ" :
         print("유효한 이름이 아님(잘못된 이름이거나 이미 조 배정 완료)")
         person = input("포함할 1인 이름 : ")
 
+# 조 배정
+# 남은 인원이 설정한 조원 수보다 적은 경우 남은 인원 전부 같은 조에 배정
 group = list()
 def set_group(number, person=None) :
     global group
@@ -66,6 +71,7 @@ def set_group(number, person=None) :
         group = random.sample(list(students_set), min(len(students_set), number))
         print("배정된 조 :", *group)
 
+# 조 배정 확정 및 조 배정 가능한 학생 목록 업데이트
 confirm = None
 while not confirm :
     set_group(number, person)

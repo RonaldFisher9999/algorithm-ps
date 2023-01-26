@@ -42,5 +42,5 @@ print("출입 기록이 수상한 사람")
 for person in more_entry :
     print(f"{person}은 입장 기록이 {more_entry[person]}회 더 많아 수상합니다.")
 for person in more_exit :
-    print(f"{person}은 입장 기록이 {more_exit[person]}회 더 많아 수상합니다.")
+    print(f"{person}은 퇴장 기록이 {more_exit[person]}회 더 많아 수상합니다.")
 

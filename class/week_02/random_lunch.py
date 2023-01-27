@@ -55,7 +55,7 @@ if include == "ㅇㅇ" :
     person = input("자신의 이름 입력 : ")
     while person not in students :
         print("유효한 이름이 아님(잘못된 이름이거나 이미 조 배정 완료)")
-        person = input("포함할 1인 이름 : ")
+        person = input("자신의 이름 입력 : ")
 
 # 조 배정
 # 남은 인원이 설정한 조원 수보다 적은 경우 남은 인원 전부 같은 조에 배정

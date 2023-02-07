@@ -14,7 +14,7 @@ def sum(iterable) :
 		answer += iterable[i]
 	return answer
 
-for _ in range(10) :
+for _ in range(2) :
 	t = int(input())
 	arr = list()
 	max_row, max_col, max_diag = 0, 0, 0

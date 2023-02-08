@@ -19,13 +19,17 @@ for t in range(1, int(input())+1) :
 			if check(now) :
 				answer = "".join(now)
 				break
+		if answer :
+			break
 	# 세로
 	if not answer :
-		for j in range(n) :
-			for i in range(n - m + 1) :
-				now = [arr[x][j] for x in range(i, i+m)]
+		arr = list(zip(*arr))
+		for i in range(n) :
+			for j in range(n - m + 1) :
+				now = arr[i][j :j + m]
 				if check(now) :
 					answer = "".join(now)
 					break
+			if answer :
+				break
 	print(f"#{t} {answer}")
-

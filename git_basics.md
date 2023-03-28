@@ -122,3 +122,18 @@
   - 파일 - GitHub 사본 저장
   - 저장소, commit 메세지 설정
   - 이후 로컬에서 다시 pull까지
+
+
+## GitHub 특강
+
+- commit하면 Git은 현 staging area에 있는 데이터의 스냅샷 저장
+
+- head vs master
+  - head는 현재의 commit을 참조, 기본적으로 master를 참조
+  - master는 branch의 마지막 commit을 참조
+  
+- checkout은 head를 바꿈
+  - `git checkout commit_id`
+    - head가 해당 commit을 참조
+  - `git checkout master`
+    - master가 head를 참조하게 변경
